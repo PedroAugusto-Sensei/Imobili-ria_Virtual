@@ -1,2 +1,2 @@
-# Imobili-ria_Virtual
+# Imobiliária_Virtual
 School project to practice what we've learned so far.
