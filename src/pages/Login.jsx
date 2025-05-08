@@ -25,14 +25,14 @@ function Login() {
     localStorage.setItem('userEmail', email);
     
     // Redirect to home page after login
-    window.location.href = '/';
+    window.location.href = '/Home';
   };
 
   return (
     <div className="login-container">
       <div className="login-card">
         <h1>Login</h1>
-        <p className="welcome-text">Welcome back to Virtual Immobiliary</p>
+        <p className="welcome-text">Bem vindo de volta!</p>
         
         {error && <div className="error-message">{error}</div>}
         
@@ -44,19 +44,19 @@ function Login() {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
+              placeholder="Digite seu email"
               required
             />
           </div>
           
           <div className="form-group">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Senha</label>
             <input
               type="password"
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter your password"
+              placeholder="Ensira sua senha"
               required
             />
           </div>

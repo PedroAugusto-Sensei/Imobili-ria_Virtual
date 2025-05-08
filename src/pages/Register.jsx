@@ -27,27 +27,27 @@ function Register() {
     console.log('Registration with:', { name, email, password });
     
     // For demo purposes, simulate successful registration and redirect to login
-    alert('Registration successful! Please log in.');
-    window.location.href = '/login';
+    alert('Registration successful!');
+    window.location.href = '/Home';
   };
 
   return (
     <div className="register-container">
       <div className="register-card">
-        <h1>Create Account</h1>
-        <p className="subtitle">Join Virtual Immobiliary today</p>
+        <h1>Crie sua Conta</h1>
+        <p className="subtitle">Junte-se a nossa Imobiliaria</p>
         
         {error && <div className="error-message">{error}</div>}
         
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="name">Full Name</label>
+            <label htmlFor="name">Nome</label>
             <input
               type="text"
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Enter your full name"
+              placeholder="Digite seu nome"
               required
             />
           </div>
@@ -59,31 +59,31 @@ function Register() {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
+              placeholder="Digite seu email"
               required
             />
           </div>
           
           <div className="form-group">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Senha</label>
             <input
               type="password"
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Create a password"
+              placeholder="Crie uma senha"
               required
             />
-            <small className="password-hint">Password must be at least 6 characters</small>
+            <small className="password-hint">A senha deve conter no mínimo 6 caracteres</small>
           </div>
           
           <button type="submit" className="register-button">
-            Create Account
+            Registre
           </button>
         </form>
         
         <div className="login-link">
-          Already have an account? <Link to="/login">Login here</Link>
+          Já possui uma conta? <Link to="/login">Login aqui</Link>
         </div>
       </div>
     </div>
