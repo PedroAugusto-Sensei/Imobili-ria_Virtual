@@ -9,26 +9,33 @@ function Register() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // Basic validation
-    if (!name || !email || !password) {
-      setError('Please fill in all fields');
-      return;
-    }
     
     if (password.length < 6) {
       setError('Password must be at least 6 characters');
       return;
     }
-    
-    // Here you would normally connect to your backend
-    console.log('Registration with:', { name, email, password });
-    
-    // For demo purposes, simulate successful registration and redirect to login
+
+    // Cria a lista no localStorage
+    const listaRegistrados = JSON.parse(localStorage.getItem('listaRegistrados') || '[]');
+
+    // Adicionando o novo usuário à lista
+    listaRegistrados.push({ name, email, password });
+
+    localStorage.setItem('listaRegistrados', JSON.stringify(listaRegistrados));
+
+    // Limpa os campos após o registro
+    setName('');
+    setEmail('');
+    setPassword('');
+
+    // Redireciona para a página inicial ou exibe uma mensagem de sucesso
     alert('Registration successful!');
     window.location.href = '/Home';
+
+    return listaRegistrados;
   };
 
   return (

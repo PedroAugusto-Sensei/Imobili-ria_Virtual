@@ -10,22 +10,27 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // Basic validation
-    if (!email || !password) {
-      setError('Please fill in all fields');
-      return;
+
+    const listaRegistrados = JSON.parse(localStorage.getItem('listaRegistrados')) || '[]';
+
+    // Tenta encontrar o usuário registrado
+    let encontrado;
+    for (let i = 0; i < listaRegistrados.length; i++) {
+      const user = listaRegistrados[i];
+      if (user.email === email && user.password === password) {
+        encontrado = user;
+        break;  // para no primeiro match
+      }
     }
-    
-    // Here you would normally connect to your backend
-    console.log('Login attempt with:', { email, password });
-    
-    // For demo purposes, simulate successful login
-    localStorage.setItem('isLoggedIn', 'true');
-    localStorage.setItem('userEmail', email);
-    
-    // Redirect to home page after login
-    window.location.href = '/Home';
+
+    // Verificando se a conta existe
+    if (encontrado) {
+      window.location.href = '/Home';
+    } else {
+      setError('Email ou senha incorretos. Ou conta inexistente.');
+      setEmail('');
+      setPassword('');
+    }
   };
 
   return (
@@ -67,7 +72,7 @@ function Login() {
         </form>
         
         <div className="register-link">
-          Don't have an account? <Link to="/register">Register here</Link>
+          Não possui uma conta? <Link to="/register">Cadastre-se aqui</Link>
         </div>
       </div>
     </div>
