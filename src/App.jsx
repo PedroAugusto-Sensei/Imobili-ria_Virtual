@@ -5,16 +5,20 @@ import './App.css'
 import LoginPage from './pages/Login'
 import RegisterPage from './pages/Register'
 import WelcomePage from './pages/Welcome';
+import HomePage from './pages/Home';
 
 function App() {
   return (
+    <>
     <Router>
       <Routes>
         <Route path="/" element={<WelcomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/home" element={<HomePage />} />
       </Routes>
     </Router>
+    </>
   );
 }
 
