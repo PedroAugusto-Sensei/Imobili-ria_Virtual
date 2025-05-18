@@ -5,7 +5,7 @@ import './Cards.css';
 function Cards() {
     return (
         <Card id='card'>
-            <Card.Img variant="top" src="./src/images/img1.jpg" id='img'/>
+            <Card.Img variant="top" src="./src/assets/images/img1.jpg" id='img'/>
             <Card.Body>
                 <Card.Title><h2 id='title-categoria'>Casa</h2></Card.Title>
                 <Card.Text>
