@@ -3,8 +3,6 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import './Filtros.css';
 
 function Filtro() {
-
-
     return (
         <DropdownButton id="dropdown-basic-button" title="Filtros" drop='down-centered'>
             <Dropdown.Item href="" className='Item'>Nome A-Z</Dropdown.Item>

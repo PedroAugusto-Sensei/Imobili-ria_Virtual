@@ -47,7 +47,7 @@ header {
 }
 
 .main-content:hover {
-    box-shadow: 0 10px 60px rgba(100, 108, 255, 0.2);
+  box-shadow: 0 10px 60px rgba(100, 108, 255, 0.2);
 }
 
 .main-content h1 {
