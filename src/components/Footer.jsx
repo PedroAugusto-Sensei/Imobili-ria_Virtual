@@ -12,7 +12,7 @@ function Footer() {
       </MDBContainer>
 
       <div className='text-center p-3' style={{ backgroundColor: '#646cff5' }}>
-        © 2025 Copyright: IFC Campus Concórdia  
+        © 2025 Copyright: IFC Campus Concórdia
       </div>
     </MDBFooter>
   );
