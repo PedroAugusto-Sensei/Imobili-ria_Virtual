@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
 }
-Col{
+.Col{
+    margin-top: 8vh;
     max-width:fit-content;
     justify-content: center;
 }
