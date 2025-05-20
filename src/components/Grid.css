@@ -1,0 +1,8 @@
+.Row{
+    display: flex;
+    justify-content: center;
+}
+Col{
+    max-width:fit-content;
+    justify-content: center;
+}
