@@ -2,8 +2,12 @@
     display: flex;
     justify-content: center;
 }
-.Col{
-    margin-top: 8vh;
+
+.col{
     max-width:fit-content;
     justify-content: center;
+}
+
+.container {
+    margin-top: 10vh;
 }

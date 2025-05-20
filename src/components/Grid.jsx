@@ -5,13 +5,13 @@ import './Grid.css';
 
 function Grid() {
   return (
-    <Container>
+    <Container className='container'>
       <Row className='Row'>
         <Col className='Col'><Cards /></Col>
         <Col className='Col'><Cards /></Col>
-        <Col className='Col'><Cards /></Col>
-        
+        <Col className='Col'><Cards /></Col>  
       </Row> 
+
       <Row className='Row'>
         <Col className='Col'><Cards /></Col>
         <Col className='Col'><Cards /></Col>

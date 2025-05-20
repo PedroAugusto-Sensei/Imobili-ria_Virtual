@@ -10,6 +10,8 @@
   color: #ffffff;
   padding: 15px;
   border-radius: 20px;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .register-card {
